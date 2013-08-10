@@ -1,0 +1,382 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0xb765c1a6, pid=3348, tid=3063331648
+#
+# JRE version: 6.0_45-b06
+# Java VM: Java HotSpot(TM) Server VM (20.45-b01 mixed mode linux-x86 )
+# Problematic frame:
+# C  [libc.so.6+0x851a6]  long double+0x1d6
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0xb6805000):  JavaThread "main" [_thread_in_native, id=3350, stack(0xb691b000,0xb696c000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x00000008
+
+Registers:
+EAX=0x00000000, EBX=0x8f30a400, ECX=0x00000000, EDX=0xb6800040
+ESP=0xb696af34, EBP=0xb696af88, ESI=0x00000169, EDI=0x00000000
+EIP=0xb765c1a6, EFLAGS=0x00010283, CR2=0x00000008
+
+Top of Stack: (sp=0xb696af34)
+0xb696af34:   b68a6f48 00000169 8f2ec161 00000000
+0xb696af44:   b68a6f48 0000000a 00000001 b6805970
+0xb696af54:   b6805000 01000005 b68a6dd8 b68a6db8
+0xb696af64:   00000000 b696afe4 b37a64d4 9027f938
+0xb696af74:   9027f938 b6805000 9027f938 9027f938
+0xb696af84:   b6805000 b696afd4 b379e64a b6805120
+0xb696af94:   b696aff0 b696afec 0000000a 00000001
+0xb696afa4:   b696afb8 b6805000 b3796fa7 00000000 
+
+Instructions: (pc=0xb765c1a6)
+0xb765c186:   66 90 66 90 66 90 66 90 66 90 56 57 8b 7c 24 0c
+0xb765c196:   31 c0 89 f9 83 e1 3f 66 0f ef c0 83 f9 30 77 17
+0xb765c1a6:   f3 0f 6f 0f 66 0f 74 c1 66 0f d7 d0 85 d2 75 73
+0xb765c1b6:   89 f8 83 e0 f0 eb 1a 89 f8 83 e0 f0 66 0f 74 00 
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x8f30a400: <offset 0x3d400> in /home/lin/语义web/CIT/libNLPIR_JNI.so at 0x8f2cd000
+ECX=0x00000000 is an unknown value
+EDX=0xb6800040 is an unknown value
+ESP=0xb696af34 is pointing into the stack for thread: 0xb6805000
+EBP=0xb696af88 is pointing into the stack for thread: 0xb6805000
+ESI=0x00000169 is an unknown value
+EDI=0x00000000 is an unknown value
+
+
+Stack: [0xb691b000,0xb696c000],  sp=0xb696af34,  free space=319k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x851a6]  long double+0x1d6
+j  kevin.zhang.NLPIR.NLPIR_GetKeyWords([BIZ)[B+0
+j  TestNLPIR.getKeyWord(Ljava/lang/String;Ljava/lang/String;)V+12
+j  TestNLPIR.main([Ljava/lang/String;)V+22
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x3e1d61]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x1c1
+V  [libjvm.so+0x5e3558]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle*, JavaCallArguments*, Thread*), JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x18
+V  [libjvm.so+0x3e1b8f]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x2f
+V  [libjvm.so+0x4161b4]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*)+0x124
+V  [libjvm.so+0x4057dc]  unsigned+0x14c
+C  [java+0x1b98]  JavaMain+0x2c8
+C  [libpthread.so.0+0x6d78]  short+0xd8
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  kevin.zhang.NLPIR.NLPIR_GetKeyWords([BIZ)[B+0
+j  TestNLPIR.getKeyWord(Ljava/lang/String;Ljava/lang/String;)V+12
+j  TestNLPIR.main([Ljava/lang/String;)V+22
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0xb6899800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=3362, stack(0x8f38c000,0x8f3dd000)]
+  0xb6897c00 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=3361, stack(0x8f3dd000,0x8f45e000)]
+  0xb6895c00 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=3360, stack(0x8f45e000,0x8f4df000)]
+  0xb6894400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3359, stack(0x8f4df000,0x8f530000)]
+  0xb6886000 JavaThread "Finalizer" daemon [_thread_blocked, id=3358, stack(0x8f895000,0x8f8e6000)]
+  0xb6884800 JavaThread "Reference Handler" daemon [_thread_blocked, id=3357, stack(0x8fc2e000,0x8fc7f000)]
+=>0xb6805000 JavaThread "main" [_thread_in_native, id=3350, stack(0xb691b000,0xb696c000)]
+
+Other Threads:
+  0xb6881000 VMThread [stack: 0x8f8e6000,0x8f967000] [id=3356]
+  0xb689b400 WatcherThread [stack: 0x8f30b000,0x8f38c000] [id=3363]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 9408K, used 325K [0xa8f80000, 0xa99f0000, 0xb36d0000)
+  eden space 8128K, 4% used [0xa8f80000,0xa8fd1538,0xa9770000)
+  from space 1280K, 0% used [0xa98b0000,0xa98b0000,0xa99f0000)
+  to   space 1280K, 0% used [0xa9770000,0xa9770000,0xa98b0000)
+ PSOldGen        total 21440K, used 0K [0x940d0000, 0x955c0000, 0xa8f80000)
+  object space 21440K, 0% used [0x940d0000,0x940d0000,0x955c0000)
+ PSPermGen       total 16384K, used 1800K [0x900d0000, 0x910d0000, 0x940d0000)
+  object space 16384K, 10% used [0x900d0000,0x90292090,0x910d0000)
+
+Code Cache  [0xb3794000, 0xb39d4000, 0xb6794000)
+ total_blobs=91 nmethods=0 adapters=59 free_code_cache=50038784 largest_free_block=0
+
+Dynamic libraries:
+08048000-08052000 r-xp 00000000 08:07 1187665    /home/lin/install1/eclipse/jre/bin/java
+08052000-08053000 rwxp 00009000 08:07 1187665    /home/lin/install1/eclipse/jre/bin/java
+09ab4000-09ad5000 rwxp 00000000 00:00 0          [heap]
+8f1e4000-8f2c0000 r-xp 00000000 08:07 1840102    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17
+8f2c0000-8f2c1000 ---p 000dc000 08:07 1840102    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17
+8f2c1000-8f2c5000 r-xp 000dc000 08:07 1840102    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17
+8f2c5000-8f2c6000 rwxp 000e0000 08:07 1840102    /usr/lib/i386-linux-gnu/libstdc++.so.6.0.17
+8f2c6000-8f2cd000 rwxp 00000000 00:00 0 
+8f2cd000-8f30a000 r-xp 00000000 08:07 1061543    /home/lin/语义web/CIT/libNLPIR_JNI.so
+8f30a000-8f30b000 rwxp 0003d000 08:07 1061543    /home/lin/语义web/CIT/libNLPIR_JNI.so
+8f30b000-8f30c000 ---p 00000000 00:00 0 
+8f30c000-8f38c000 rwxp 00000000 00:00 0          [stack:3363]
+8f38c000-8f38f000 ---p 00000000 00:00 0 
+8f38f000-8f3dd000 rwxp 00000000 00:00 0          [stack:3362]
+8f3dd000-8f3e0000 ---p 00000000 00:00 0 
+8f3e0000-8f45e000 rwxp 00000000 00:00 0          [stack:3361]
+8f45e000-8f461000 ---p 00000000 00:00 0 
+8f461000-8f4df000 rwxp 00000000 00:00 0          [stack:3360]
+8f4df000-8f4e2000 ---p 00000000 00:00 0 
+8f4e2000-8f530000 rwxp 00000000 00:00 0          [stack:3359]
+8f530000-8f695000 r-xp 001c8000 08:07 1840503    /usr/lib/locale/locale-archive
+8f695000-8f895000 r-xp 00000000 08:07 1840503    /usr/lib/locale/locale-archive
+8f895000-8f898000 ---p 00000000 00:00 0 
+8f898000-8f8e6000 rwxp 00000000 00:00 0          [stack:3358]
+8f8e6000-8f8e7000 ---p 00000000 00:00 0 
+8f8e7000-8f967000 rwxp 00000000 00:00 0          [stack:3356]
+8f967000-8fb00000 r-xs 02b64000 08:07 1187929    /home/lin/install1/eclipse/jre/lib/rt.jar
+8fb00000-8fb21000 rwxp 00000000 00:00 0 
+8fb21000-8fc00000 ---p 00000000 00:00 0 
+8fc2e000-8fc31000 ---p 00000000 00:00 0 
+8fc31000-8fc7f000 rwxp 00000000 00:00 0          [stack:3357]
+8fc7f000-8fc80000 ---p 00000000 00:00 0 
+8fc80000-8fd00000 rwxp 00000000 00:00 0          [stack:3353]
+8fd00000-8fd21000 rwxp 00000000 00:00 0 
+8fd21000-8fe00000 ---p 00000000 00:00 0 
+8fe06000-8fe21000 r-xp 00000000 08:07 1442658    /lib/i386-linux-gnu/libgcc_s.so.1
+8fe21000-8fe22000 r-xp 0001a000 08:07 1442658    /lib/i386-linux-gnu/libgcc_s.so.1
+8fe22000-8fe23000 rwxp 0001b000 08:07 1442658    /lib/i386-linux-gnu/libgcc_s.so.1
+8fe37000-8fe6b000 rwxp 00000000 00:00 0 
+8fe6b000-8fe6c000 ---p 00000000 00:00 0 
+8fe6c000-8fef4000 rwxp 00000000 00:00 0          [stack:3352]
+8fef4000-8ff0c000 rwxp 00000000 00:00 0 
+8ff0c000-8ff17000 rwxp 00000000 00:00 0 
+8ff17000-8ffb4000 rwxp 00000000 00:00 0 
+8ffb4000-8ffbc000 rwxp 00000000 00:00 0 
+8ffbc000-8ffd4000 rwxp 00000000 00:00 0 
+8ffd4000-8ffdf000 rwxp 00000000 00:00 0 
+8ffdf000-9007b000 rwxp 00000000 00:00 0 
+9007b000-90081000 rwxp 00000000 00:00 0 
+90081000-900cf000 rwxp 00000000 00:00 0 
+900cf000-910d0000 rwxp 00000000 00:00 0 
+910d0000-940d0000 rwxp 00000000 00:00 0 
+940d0000-955c0000 rwxp 00000000 00:00 0 
+955c0000-a8f80000 rwxp 00000000 00:00 0 
+a8f80000-a99f0000 rwxp 00000000 00:00 0 
+a99f0000-b36d0000 rwxp 00000000 00:00 0 
+b36d4000-b36dd000 rwxp 00000000 00:00 0 
+b36dd000-b3794000 rwxp 00000000 00:00 0 
+b3794000-b39d4000 rwxp 00000000 00:00 0 
+b39d4000-b6794000 rwxp 00000000 00:00 0 
+b6794000-b679f000 r-xp 00000000 08:07 1442706    /lib/i386-linux-gnu/libnss_files-2.17.so
+b679f000-b67a0000 r-xp 0000a000 08:07 1442706    /lib/i386-linux-gnu/libnss_files-2.17.so
+b67a0000-b67a1000 rwxp 0000b000 08:07 1442706    /lib/i386-linux-gnu/libnss_files-2.17.so
+b67a1000-b67ab000 r-xp 00000000 08:07 1442710    /lib/i386-linux-gnu/libnss_nis-2.17.so
+b67ab000-b67ac000 r-xp 00009000 08:07 1442710    /lib/i386-linux-gnu/libnss_nis-2.17.so
+b67ac000-b67ad000 rwxp 0000a000 08:07 1442710    /lib/i386-linux-gnu/libnss_nis-2.17.so
+b67ad000-b67c2000 r-xp 00000000 08:07 1442700    /lib/i386-linux-gnu/libnsl-2.17.so
+b67c2000-b67c3000 r-xp 00014000 08:07 1442700    /lib/i386-linux-gnu/libnsl-2.17.so
+b67c3000-b67c4000 rwxp 00015000 08:07 1442700    /lib/i386-linux-gnu/libnsl-2.17.so
+b67c4000-b67c6000 rwxp 00000000 00:00 0 
+b67c9000-b67d8000 r-xp 00000000 08:07 1187888    /home/lin/install1/eclipse/jre/lib/i386/libzip.so
+b67d8000-b67da000 rwxp 0000e000 08:07 1187888    /home/lin/install1/eclipse/jre/lib/i386/libzip.so
+b67da000-b67fe000 r-xp 00000000 08:07 1187866    /home/lin/install1/eclipse/jre/lib/i386/libjava.so
+b67fe000-b6800000 rwxp 00023000 08:07 1187866    /home/lin/install1/eclipse/jre/lib/i386/libjava.so
+b6800000-b68db000 rwxp 00000000 00:00 0 
+b68db000-b6900000 ---p 00000000 00:00 0 
+b6901000-b6909000 rwxs 00000000 08:07 527601     /tmp/hsperfdata_lin/3348
+b6909000-b6910000 r-xp 00000000 08:07 1442702    /lib/i386-linux-gnu/libnss_compat-2.17.so
+b6910000-b6911000 r-xp 00006000 08:07 1442702    /lib/i386-linux-gnu/libnss_compat-2.17.so
+b6911000-b6912000 rwxp 00007000 08:07 1442702    /lib/i386-linux-gnu/libnss_compat-2.17.so
+b6912000-b6919000 r-xp 00000000 08:07 1442753    /lib/i386-linux-gnu/librt-2.17.so
+b6919000-b691a000 r-xp 00006000 08:07 1442753    /lib/i386-linux-gnu/librt-2.17.so
+b691a000-b691b000 rwxp 00007000 08:07 1442753    /lib/i386-linux-gnu/librt-2.17.so
+b691b000-b691e000 ---p 00000000 00:00 0 
+b691e000-b696c000 rwxp 00000000 00:00 0          [stack:3350]
+b696c000-b69ad000 r-xp 00000000 08:07 1442681    /lib/i386-linux-gnu/libm-2.17.so
+b69ad000-b69ae000 r-xp 00040000 08:07 1442681    /lib/i386-linux-gnu/libm-2.17.so
+b69ae000-b69af000 rwxp 00041000 08:07 1442681    /lib/i386-linux-gnu/libm-2.17.so
+b69af000-b7164000 r-xp 00000000 08:07 1187908    /home/lin/install1/eclipse/jre/lib/i386/server/libjvm.so
+b7164000-b71b8000 rwxp 007b5000 08:07 1187908    /home/lin/install1/eclipse/jre/lib/i386/server/libjvm.so
+b71b8000-b75d7000 rwxp 00000000 00:00 0 
+b75d7000-b7784000 r-xp 00000000 08:07 1442633    /lib/i386-linux-gnu/libc-2.17.so
+b7784000-b7786000 r-xp 001ad000 08:07 1442633    /lib/i386-linux-gnu/libc-2.17.so
+b7786000-b7787000 rwxp 001af000 08:07 1442633    /lib/i386-linux-gnu/libc-2.17.so
+b7787000-b778a000 rwxp 00000000 00:00 0 
+b778a000-b778d000 r-xp 00000000 08:07 1442648    /lib/i386-linux-gnu/libdl-2.17.so
+b778d000-b778e000 r-xp 00002000 08:07 1442648    /lib/i386-linux-gnu/libdl-2.17.so
+b778e000-b778f000 rwxp 00003000 08:07 1442648    /lib/i386-linux-gnu/libdl-2.17.so
+b778f000-b7796000 r-xp 00000000 08:07 1187879    /home/lin/install1/eclipse/jre/lib/i386/jli/libjli.so
+b7796000-b7798000 rwxp 00006000 08:07 1187879    /home/lin/install1/eclipse/jre/lib/i386/jli/libjli.so
+b7798000-b7799000 rwxp 00000000 00:00 0 
+b7799000-b77b0000 r-xp 00000000 08:07 1442745    /lib/i386-linux-gnu/libpthread-2.17.so
+b77b0000-b77b1000 r-xp 00016000 08:07 1442745    /lib/i386-linux-gnu/libpthread-2.17.so
+b77b1000-b77b2000 rwxp 00017000 08:07 1442745    /lib/i386-linux-gnu/libpthread-2.17.so
+b77b2000-b77b4000 rwxp 00000000 00:00 0 
+b77ba000-b77bb000 rwxp 00000000 00:00 0 
+b77bb000-b77bc000 r-xp 00000000 00:00 0 
+b77bc000-b77c7000 r-xp 00000000 08:07 1187915    /home/lin/install1/eclipse/jre/lib/i386/libverify.so
+b77c7000-b77c8000 rwxp 0000b000 08:07 1187915    /home/lin/install1/eclipse/jre/lib/i386/libverify.so
+b77c8000-b77ca000 rwxp 00000000 00:00 0 
+b77ca000-b77cb000 r-xp 00000000 00:00 0          [vdso]
+b77cb000-b77eb000 r-xp 00000000 08:07 1442609    /lib/i386-linux-gnu/ld-2.17.so
+b77eb000-b77ec000 r-xp 0001f000 08:07 1442609    /lib/i386-linux-gnu/ld-2.17.so
+b77ec000-b77ed000 rwxp 00020000 08:07 1442609    /lib/i386-linux-gnu/ld-2.17.so
+bfc6b000-bfc8c000 rwxp 00000000 00:00 0          [stack]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: TestNLPIR
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=/home/lin/install1/apache-nutch-1.7/lib:
+PATH=/home/lin/install1/apache-nutch-1.7/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+LD_LIBRARY_PATH=/home/lin/install1/eclipse/jre/lib/i386/server:/home/lin/install1/eclipse/jre/lib/i386:/home/lin/install1/eclipse/jre/../lib/i386:/home/lin/install1/eclipse/jre/lib/i386/client:/home/lin/install1/eclipse/jre/lib/i386:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x7285f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x7285f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x5e21c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x5e21c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x5e21c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x5e21c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x5e5420], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x5e5000], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: [libjvm.so+0x5e5000], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x5e5000], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:wheezy/sid
+
+uname:Linux 3.8.0-28-generic #41-Ubuntu SMP Fri Jul 26 16:28:49 UTC 2013 i686
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 15923, NOFILE 4096, AS infinity
+load average:0.42 0.81 0.66
+
+/proc/meminfo:
+MemTotal:        2054676 kB
+MemFree:          147072 kB
+Buffers:           39660 kB
+Cached:          1065328 kB
+SwapCached:            0 kB
+Active:           759428 kB
+Inactive:        1067044 kB
+Active(anon):     518312 kB
+Inactive(anon):   494164 kB
+Active(file):     241116 kB
+Inactive(file):   572880 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+HighTotal:       1173384 kB
+HighFree:          14852 kB
+LowTotal:         881292 kB
+LowFree:          132220 kB
+SwapTotal:       2077692 kB
+SwapFree:        2077692 kB
+Dirty:               668 kB
+Writeback:             0 kB
+AnonPages:        721644 kB
+Mapped:           246700 kB
+Shmem:            290924 kB
+Slab:              49764 kB
+SReclaimable:      32912 kB
+SUnreclaim:        16852 kB
+KernelStack:        4680 kB
+PageTables:        13080 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3105028 kB
+Committed_AS:    4632388 kB
+VmallocTotal:     122880 kB
+VmallocUsed:        9736 kB
+VmallocChunk:     110656 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       10232 kB
+DirectMap2M:      903168 kB
+
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Pentium(R) Dual-Core  CPU      E2210  @ 2.20GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2200.000
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm dtherm
+bogomips	: 4400.14
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Pentium(R) Dual-Core  CPU      E2210  @ 2.20GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2200.000
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm dtherm
+bogomips	: 4400.14
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 2054676k(147072k free), swap 2077692k(2077692k free)
+
+vm_info: Java HotSpot(TM) Server VM (20.45-b01) for linux-x86 JRE (1.6.0_45-b06), built on Mar 26 2013 13:50:03 by "java_re" with gcc 3.2.1-7a (J2SE release)
+
+time: Fri Aug  9 12:37:16 2013
+elapsed time: 0 seconds
+

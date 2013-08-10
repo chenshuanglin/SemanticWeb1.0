@@ -1,0 +1,126 @@
+*{
+	margin:0;
+	padding:0;
+}
+#containt
+{
+	width:600px;
+	height:500px;
+	margin:0 auto;
+	margin-top:10px;
+	text-align:center;
+}
+.box
+{
+	margin:0 auto;
+	width:520px;
+	text-align:center;	
+}
+html
+{
+	overflow-y:auto;
+}
+.swap
+{
+	width:405px;
+	height:28px;
+	font:16px/22px arial;
+	margin:5px 0 0 7px;
+	background:#fff;
+	outline:none;
+	-webkit-appearance:none;
+	background:url(./img/wek03.gif) left bottom repeat-x;
+}
+.wap
+{
+	width:95px;
+	height:32px;
+	padding-top:2px\9;
+	font-size:14px;
+	cursor:pointer;
+	border-radius:5px;
+	font-size:19px;
+	color:#2e3667;
+	font-weight:bold;
+}
+#down
+{
+	text-align:center;
+}
+#center
+{
+	text-align:center;
+	line-height:50%;
+	letter-spacing:3px;
+	margin-top:80px;
+}
+#change
+{
+	color:blue;
+	cursor:pointer;
+}
+#div {
+   width: 200px; 
+   height: 220px; 
+   background: gray;
+   position: relative;
+   -moz-border-radius:    10px; 
+   -webkit-border-radius: 10px; 
+   border-radius:         10px;
+  float:right;
+   margin-top:-55px;
+   display:none;
+}
+#div:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid gray;
+   border-bottom: 13px solid transparent;
+}
+#div a
+{
+		text-decoration:none;
+		color:white;
+}
+.boxl{
+	float:left;
+	width:260px;
+}
+.boxl img{
+	margin-top:-50px;
+	width:250px;
+}
+#head{
+	background:url(./img/wek03.gif) bottom left repeat-x;
+}
+#head form{
+	float:left;
+	margin-top:30px;
+}
+#head form .text{
+	width:320px;
+	height:20px;
+}
+#resultcontent{
+	border-top:3px solid #2e3667;
+	width:100%;
+}
+#resultcontent .boxs {
+	float:left;
+	width:90%;
+	font-align:left;
+	font-size:19px;
+	padding-top:20px;
+	padding-left:15px;
+}
+#resultcontent .top{
+	width:80%;
+}
+#resultcontent .texts{
+	width:90%
+}

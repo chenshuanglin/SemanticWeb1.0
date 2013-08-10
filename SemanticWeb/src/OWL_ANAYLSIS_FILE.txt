@@ -1,0 +1,4 @@
+university.owl 大学生 普通教师 博士研究生 硕士生 博士生 大学 研究生 本科生 大学教师 教授 null 硕士研究生 null null 
+test/electronic.owl 手机 电视 黑白电视 触屏手机 电脑 全键盘手机 彩色电视 计算机 电子设备 洗衣机
+test/test1/electronic.owl 手机 电视 黑白电视 触屏手机 电脑 全键盘手机 彩色电视 计算机 电子设备 洗衣机 
+jenainf.owl 独立概念 null null 性别 人类概念 人 

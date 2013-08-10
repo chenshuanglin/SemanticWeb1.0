@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<configs>
+	<!-- 指定起始页面,可以有多个-->
+	<!-- 
+	 <src sn="01"> 
+		<link>http://www.baidu.com/</link>
+		
+	</src>
+	-->
+	<src sn="02">
+	<link>http://blog.chinaunix.net/uid/27034868.html</link>
+	</src>
+	<!--  
+	<src sn="03">
+		<link>http://blog.chinaunix.net/</link>
+	</src>
+	-->
+	<page>
+		<!-- 抓取页面个数 -->
+		<page_count>100</page_count>
+	</page>
+	
+	<downloadFile>
+		<fileDir>/home/lin/语义web/spiderHtml/</fileDir>
+	</downloadFile>
+</configs>

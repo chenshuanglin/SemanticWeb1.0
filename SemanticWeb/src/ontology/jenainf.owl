@@ -1,0 +1,617 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY jenainf "http://www.persist.com.cn/jenainf.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:jenainf="http://www.persist.com.cn/jenainf.owl#">
+    <Ontology rdf:about="http://www.persist.com.cn/jenainf.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#丈夫 -->
+
+    <ObjectProperty rdf:about="&jenainf;丈夫">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <inverseOf rdf:resource="&jenainf;妻子"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#侄女 -->
+
+    <ObjectProperty rdf:about="&jenainf;侄女">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#侄子 -->
+
+    <ObjectProperty rdf:about="&jenainf;侄子">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#儿子 -->
+
+    <ObjectProperty rdf:about="&jenainf;儿子">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#叔叔 -->
+
+    <ObjectProperty rdf:about="&jenainf;叔叔">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#同事 -->
+
+    <ObjectProperty rdf:about="&jenainf;同事">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#哥哥 -->
+
+    <ObjectProperty rdf:about="&jenainf;哥哥">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#堂兄 -->
+
+    <ObjectProperty rdf:about="&jenainf;堂兄">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#堂妹 -->
+
+    <ObjectProperty rdf:about="&jenainf;堂妹">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#堂姐 -->
+
+    <ObjectProperty rdf:about="&jenainf;堂姐">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#堂弟 -->
+
+    <ObjectProperty rdf:about="&jenainf;堂弟">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#外孙 -->
+
+    <ObjectProperty rdf:about="&jenainf;外孙">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#外孙女 -->
+
+    <ObjectProperty rdf:about="&jenainf;外孙女">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#外甥 -->
+
+    <ObjectProperty rdf:about="&jenainf;外甥">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#女儿 -->
+
+    <ObjectProperty rdf:about="&jenainf;女儿">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#奶奶 -->
+
+    <ObjectProperty rdf:about="&jenainf;奶奶">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#妈妈 -->
+
+    <ObjectProperty rdf:about="&jenainf;妈妈">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#妹妹 -->
+
+    <ObjectProperty rdf:about="&jenainf;妹妹">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#妻子 -->
+
+    <ObjectProperty rdf:about="&jenainf;妻子">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#姐姐 -->
+
+    <ObjectProperty rdf:about="&jenainf;姐姐">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#姑姑 -->
+
+    <ObjectProperty rdf:about="&jenainf;姑姑">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#姥姥 -->
+
+    <ObjectProperty rdf:about="&jenainf;姥姥">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#姥爷 -->
+
+    <ObjectProperty rdf:about="&jenainf;姥爷">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#姨妈 -->
+
+    <ObjectProperty rdf:about="&jenainf;姨妈">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#孙女 -->
+
+    <ObjectProperty rdf:about="&jenainf;孙女">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#孙子 -->
+
+    <ObjectProperty rdf:about="&jenainf;孙子">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#弟弟 -->
+
+    <ObjectProperty rdf:about="&jenainf;弟弟">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#性别 -->
+
+    <ObjectProperty rdf:about="&jenainf;性别">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;性别"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#朋友 -->
+
+    <ObjectProperty rdf:about="&jenainf;朋友">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#爷爷 -->
+
+    <ObjectProperty rdf:about="&jenainf;爷爷">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#爸爸 -->
+
+    <ObjectProperty rdf:about="&jenainf;爸爸">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#舅舅 -->
+
+    <ObjectProperty rdf:about="&jenainf;舅舅">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#表哥 -->
+
+    <ObjectProperty rdf:about="&jenainf;表哥">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#表妹 -->
+
+    <ObjectProperty rdf:about="&jenainf;表妹">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#表姐 -->
+
+    <ObjectProperty rdf:about="&jenainf;表姐">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#表弟 -->
+
+    <ObjectProperty rdf:about="&jenainf;表弟">
+        <rdfs:range rdf:resource="&jenainf;人"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#出生年月 -->
+
+    <DatatypeProperty rdf:about="&jenainf;出生年月">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#能够 -->
+
+    <DatatypeProperty rdf:about="&jenainf;能够">
+        <rdfs:domain rdf:resource="&jenainf;人"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </DatatypeProperty>
+    <Axiom>
+        <rdfs:label xml:lang="en">测试</rdfs:label>
+        <annotatedSource rdf:resource="&jenainf;能够"/>
+        <annotatedTarget rdf:resource="&rdfs;Literal"/>
+        <annotatedProperty rdf:resource="&rdfs;range"/>
+    </Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#人 -->
+
+    <Class rdf:about="&jenainf;人"/>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#人类概念 -->
+
+    <Class rdf:about="&jenainf;人类概念">
+        <rdfs:subClassOf rdf:resource="&jenainf;独立概念"/>
+    </Class>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#性别 -->
+
+    <Class rdf:about="&jenainf;性别">
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&jenainf;性别"/>
+                    <Class>
+                        <oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&jenainf;女"/>
+                            <rdf:Description rdf:about="&jenainf;男"/>
+                        </oneOf>
+                    </Class>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&jenainf;人类概念"/>
+    </Class>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#独立概念 -->
+
+    <Class rdf:about="&jenainf;独立概念"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#刘大壮 -->
+
+    <NamedIndividual rdf:about="&jenainf;刘大壮">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:爸爸 rdf:resource="&jenainf;刘小雨"/>
+        <jenainf:儿子 rdf:resource="&jenainf;刘老大"/>
+        <jenainf:性别 rdf:resource="&jenainf;男"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#刘小雨 -->
+
+    <NamedIndividual rdf:about="&jenainf;刘小雨">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:儿子 rdf:resource="&jenainf;刘大壮"/>
+        <jenainf:性别 rdf:resource="&jenainf;男"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#刘爱美 -->
+
+    <NamedIndividual rdf:about="&jenainf;刘爱美">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:女儿 rdf:resource="&jenainf;刘老大"/>
+        <jenainf:性别 rdf:resource="&jenainf;女"/>
+        <jenainf:妻子 rdf:resource="&jenainf;王天来"/>
+        <jenainf:妈妈 rdf:resource="&jenainf;王小小"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#刘老大 -->
+
+    <NamedIndividual rdf:about="&jenainf;刘老大">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:爸爸 rdf:resource="&jenainf;刘大壮"/>
+        <jenainf:爸爸 rdf:resource="&jenainf;刘爱美"/>
+        <jenainf:性别 rdf:resource="&jenainf;男"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#女 -->
+
+    <NamedIndividual rdf:about="&jenainf;女">
+        <rdf:type rdf:resource="&jenainf;性别"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#王天来 -->
+
+    <NamedIndividual rdf:about="&jenainf;王天来">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:丈夫 rdf:resource="&jenainf;刘爱美"/>
+        <jenainf:爸爸 rdf:resource="&jenainf;王小小"/>
+        <jenainf:儿子 rdf:resource="&jenainf;王老大"/>
+        <jenainf:性别 rdf:resource="&jenainf;男"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#王小小 -->
+
+    <NamedIndividual rdf:about="&jenainf;王小小">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:儿子 rdf:resource="&jenainf;刘爱美"/>
+        <jenainf:儿子 rdf:resource="&jenainf;王天来"/>
+        <jenainf:性别 rdf:resource="&jenainf;男"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#王老大 -->
+
+    <NamedIndividual rdf:about="&jenainf;王老大">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:爸爸 rdf:resource="&jenainf;王天来"/>
+        <jenainf:性别 rdf:resource="&jenainf;男"/>
+        <jenainf:朋友 rdf:resource="&jenainf;赵本山"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#男 -->
+
+    <NamedIndividual rdf:about="&jenainf;男">
+        <rdf:type rdf:resource="&jenainf;性别"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.persist.com.cn/jenainf.owl#赵本山 -->
+
+    <NamedIndividual rdf:about="&jenainf;赵本山">
+        <rdf:type rdf:resource="&jenainf;人"/>
+        <jenainf:出生年月 rdf:datatype="&xsd;date">1955-10-12</jenainf:出生年月>
+        <jenainf:能够 rdf:datatype="&rdfs;Literal">飞</jenainf:能够>
+        <jenainf:朋友 rdf:resource="&jenainf;王老大"/>
+        <jenainf:性别 rdf:resource="&jenainf;男"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&jenainf;女"/>
+            <rdf:Description rdf:about="&jenainf;男"/>
+        </distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

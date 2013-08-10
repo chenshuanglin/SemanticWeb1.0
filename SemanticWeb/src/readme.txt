@@ -1,0 +1,6 @@
+不管是windows还是linux系统都要更改keyvin.zhang那个包下的NLPIR的最后几行中的
+System.load("/home/lin/语义web/CIT/libNLPIR_JNI.so");
+windows更改为项目中NLPIR_JNI.dll的绝对路径
+linuxs更改为你的libNLPIR_JNI.so文件所在的绝对路径
+
+64位系统要更改里面相应的文件，其实就是替换掉libNLPIR这个文件，或者NLPIR_JNI.dll这个文件

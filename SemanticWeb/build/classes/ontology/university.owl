@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.owl-ontologies.com/OntologyUniversty.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="http://www.owl-ontologies.com/OntologyUniversity.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/OntologyUniversity.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="大学教师">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="大学生"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.owl-ontologies.com/OntologyUniversty.owl#大学"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="研究生">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="本科生"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#大学生"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="硕士生">
+    <rdfs:subClassOf rdf:resource="#研究生"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="硕士研究生"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="博士研究生">
+    <rdfs:subClassOf rdf:resource="#研究生"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="博士生"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#大学生">
+    <owl:disjointWith rdf:resource="#大学教师"/>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/OntologyUniversty.owl#大学"/>
+  </owl:Class>
+  <owl:Class rdf:ID="普通教师">
+    <rdfs:subClassOf rdf:resource="#大学教师"/>
+  </owl:Class>
+  <owl:Class rdf:about="#本科生">
+    <owl:disjointWith rdf:resource="#研究生"/>
+    <rdfs:subClassOf rdf:resource="#大学生"/>
+  </owl:Class>
+  <owl:Class rdf:ID="教授">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="任教于"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#普通教师"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#大学教师"/>
+  </owl:Class>
+  <owl:Class rdf:about="#硕士研究生">
+    <owl:equivalentClass rdf:resource="#硕士生"/>
+    <rdfs:subClassOf rdf:resource="#研究生"/>
+  </owl:Class>
+  <owl:Class rdf:about="#博士生">
+    <owl:equivalentClass rdf:resource="#博士研究生"/>
+    <rdfs:subClassOf rdf:resource="#研究生"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#任教于">
+    <rdfs:domain rdf:resource="#大学教师"/>
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/OntologyUniversty.owl#大学"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="就读于">
+    <rdfs:range rdf:resource="http://www.owl-ontologies.com/OntologyUniversty.owl#大学"/>
+    <rdfs:domain rdf:resource="#大学生"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="校名">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.owl-ontologies.com/OntologyUniversty.owl#大学"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="姓名">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#大学教师"/>
+          <owl:Class rdf:about="#大学生"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="专业">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#大学教师"/>
+          <owl:Class rdf:about="#大学生"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="年级">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >4</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:rest>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+              >3</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >2</rdf:first>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+          >1</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#大学生"/>
+  </owl:DatatypeProperty>
+  <硕士生 rdf:ID="李四">
+    <专业 xml:lang="ch">计算机科学与技术</专业>
+    <姓名 xml:lang="ch">李四</姓名>
+    <年级 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</年级>
+    <校名 xml:lang="ch">西安邮电大学</校名>
+  </硕士生>
+  <硕士生 rdf:ID="张三">
+    <校名 xml:lang="zh">西安邮电大学</校名>
+    <姓名 xml:lang="zh">张三</姓名>
+    <年级 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</年级>
+    <专业 xml:lang="zh">计算机科学与技术</专业>
+  </硕士生>
+  <博士生 rdf:ID="王五">
+    <年级 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</年级>
+    <专业 xml:lang="ch">计算机科学与技术</专业>
+    <姓名 xml:lang="ch">王五</姓名>
+    <校名 xml:lang="ch">西安邮电大学</校名>
+  </博士生>
+  <本科生 rdf:ID="陈双麟">
+    <年级 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</年级>
+    <姓名 xml:lang="ch">陈双麟</姓名>
+    <专业 xml:lang="ch">软件工程</专业>
+    <校名 xml:lang="ch">西安邮电大学</校名>
+  </本科生>
+  <owl:AllDifferent/>
+  <大学教师 rdf:ID="陈莉君">
+    <校名 xml:lang="zh">西安邮电大学</校名>
+    <专业 xml:lang="zh">软件</专业>
+    <任教于>
+      <j.0:大学 rdf:ID="西安邮电大学">
+        <校名 xml:lang="zh">西安邮电大学</校名>
+      </j.0:大学>
+    </任教于>
+    <姓名 xml:lang="zh">陈莉君</姓名>
+  </大学教师>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/lin/语义web/语义web/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/lin/语义web/语义web/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/home/lin/语义web/语义web/htmlparser.jar"/>
+	<classpathentry kind="lib" path="/home/lin/语义web/爬虫用到的炸包/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="/home/lin/语义web/爬虫用到的炸包/htmllexer.jar"/>
+	<classpathentry kind="lib" path="/home/lin/下载/jsoup-1.7.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
